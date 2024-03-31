@@ -1,0 +1,241 @@
+.header{
+    display: flex;
+    height: 48px;
+    align-items: center;
+    padding: 0px 16px 0px 24px;
+    position: sticky;
+    top:0;
+    background-color: white;
+}
+
+.in-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo-img{
+    width: 218.177px;
+}
+
+body{
+    margin: 0px;
+}
+
+.header-list{
+    display: flex;
+}
+
+.header-input{
+    border-color: rgb(95, 99, 104);
+    border:0px;
+    margin: 0px;
+    padding:8px 8px 8px 40px;
+    background-color:rgb(241, 243, 244);
+    border-radius: 3px;
+}
+
+.nocontent{
+    color:white;
+    font-family:"Roboto", sans-serif;
+    font-weight:500;
+}
+
+.time-to-sync-up-content{
+    background-color: rgb(26, 115, 232);
+    height: 63.6667px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register{
+    font-weight:700;
+}
+
+.devsite-banner-translated-image{
+    margin: 4px 0 -4px;
+    width: 122px;
+    margin-inline-end: 24px;
+}
+
+.devsite-banner-translated-text{
+    color: rgba(0, 0, 0, .65);
+    font-size :14px;
+    font-family:"Roboto", sans-serif;
+}
+
+.link-of-cloud-translation-API{
+    color:rgb(26, 115, 232);
+    text-decoration-line:none;
+}
+
+.button{
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border-color: rgb(218, 220, 224);
+    border-width: 1px;
+    color:rgb(26, 115, 232);
+    padding: 12px 24px;
+}
+
+.devsite-banner-message{
+    display: flex;
+    padding:20px 24px 19px 24px;
+    align-items: center;
+    height: 36px;
+}
+
+.devsite-banner{
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(241, 243, 244);
+    height: 75px;
+
+}
+
+.devsite-landing-row-html{
+    background-image: url(https://developers.google.com/homepage-assets/images/io-promo.svg);
+    height: 841px;
+    background-position-x:calc(100% - 0px);
+    background-position-y:0%;
+    background-repeat:no-repeat;
+    background-color:#eeeeee;
+    display: grid;
+    grid-template-columns:max(65px) 1fr 1fr max(65px);
+    grid-template-rows:1fr 1fr auto 2fr;
+    grid-auto-rows:50px;
+    overflow: hidden;
+}
+
+#tune-in-for-google-io-on-may-14{
+    color:#202124;
+    font-size: 72px;
+    font-family: "Open Sans", sans-serif;
+    font-weight:500;
+}
+
+.dgc-hero-fullscreen-item{
+    color:#202124;
+    grid-area:3/2/4/3;
+}
+
+.devsite-landing-row{
+    background-color:#eeeeee;  
+    height:474px;
+}
+
+.devsite-landing-row-group{
+    display: grid;
+    gap:24px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows:minmax(219px,auto) minmax(219px,auto) minmax(219px,auto);
+    margin-top: 32px;
+}
+
+.devsite-landing-row-item{
+    border-radius: 10px;
+    border: 1px solid rgb(218, 220, 224);
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    padding:8px 32px 25px 32px;
+}
+
+.devsite-landing-row-item-custom-image-icon{
+    width: 64px;
+    height: 64px;
+}
+
+p{
+    font-family:"Roboto", sans-serif;
+}
+
+.devsite-landing-row-item>div>p:first-child{
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+.second-title{
+    font-size: 48px;
+    text-align: center;
+    margin: 0px;
+}
+
+.devsite-landing-row-inner{
+    padding: 0px 24px;
+    max-width: 1440px;
+}
+
+.construct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+    padding: 8px 0px 0px;
+    margin-bottom: 40px;
+}
+
+.button-primary{
+    background-color: rgb(26, 115, 232);
+    color:white;
+    border-radius: 4px;
+    width:188px;
+    padding: 12px 24px;
+    text-decoration-line:none;
+    margin: 4px;
+}
+
+.devsite-landing-row-description{
+    margin-top: 16px;
+    color:rgb(32, 33, 36);
+    font-family: "Google Sans";
+    font-size: 24px;
+    text-align: center;
+}
+
+.devsite-landing-row-group-develop{
+    display: grid;
+    gap:24px;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:minmax(170px,auto) minmax(170px,auto);
+    margin-top: 32px;
+
+}
+
+.develop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.develop-box{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0px 24px;
+}
+
+.develop-devsite-landing-row-item{
+    border-radius: 8px;
+    border: 1px solid rgb(218, 220, 224);
+    display: flex;
+}
+
+.devsite-landing-row-item-image{
+    width: 119.406px;
+    padding:16px
+}
+
+.devsite-landing-row-item-description{
+    padding: 16px;
+    flex-grow: 1;
+}
