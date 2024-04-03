@@ -11,8 +11,12 @@
     box-shadow: 0 1px 6px rgba(60,64,67,.15);
 }
 
+.header>div:first-child{
+    max-width: 218.177px;
+}
+
 .logo-img{
-    width: 218.177px;
+    width: 100%;
 }
 
 .devsite-devprofile-button{
@@ -382,10 +386,9 @@ body{
 .devsite-landing-row-group{
     display: grid;
     gap:24px;
-    grid-template-columns:minmax(182.833px,auto) minmax(182.833px,auto) minmax(182.833px,auto) minmax(182.833px,auto);
+    grid-template-columns:minmax(175px,auto) minmax(175px,auto) minmax(175px,auto) minmax(175px,auto);
     grid-template-rows:minmax(219px,auto) minmax(219px,auto) minmax(219px,auto);
     margin-top: 32px;
-    width:100%;
 }
 
 .devsite-landing-row-item{
@@ -863,7 +866,6 @@ p{
 .devsite-footer-utility-link-1>ul{
     list-style: none;
     display: flex;
-    width:  527.073px;
     justify-content: space-between;
     margin: 0px;
     padding: 0px;
@@ -875,6 +877,7 @@ p{
 
 .devsite-footer-utility-link-1>ul>li{
     padding: 8px 0px;
+    width:fit-content;
 }
 
 .language-button{
@@ -1091,7 +1094,6 @@ p{
 }
 
 @media screen and (max-width:600px){
-
     .devsite-landing-row-html{
         grid-template-rows:max(65px) 40% auto 0px;
     }
