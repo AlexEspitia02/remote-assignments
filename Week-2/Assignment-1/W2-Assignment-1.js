@@ -13,13 +13,13 @@ function maxReduce(numbers) {
 
 function maxForLoop(numbers) {
     // your code here, for-loop method preferred
-    let MaxNumber=0;
+    let maxNumber=numbers[0];
     for(let i=0;i<numbers.length;i++){
-        if(MaxNumber<numbers[i]){
-            MaxNumber=numbers[i];
+        if(maxNumber<numbers[i]){
+            maxNumber=numbers[i];
         }
     }
-    return MaxNumber;
+    return maxNumber;
 }
 
 
