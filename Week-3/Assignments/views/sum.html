@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Sum</title>
+        <script>
+            function getSum (){
+                let number=document.getElementById('search').value;
+                // 1.創建對象：xhr為XMLHttpRequest縮寫。創建一個新的 XMLHttpRequest 物件
+                const xhr = new XMLHttpRequest();
+                // 2.初始化：設定請求方法和url。
+                //設定 XMLHttpRequest 物件的參數，發送一個 GET 請求，目標網址
+                xhr.open('GET' , `http://localhost:3000/data?number=${number}`);
+                // 4.事件綁定：處理服務端返回的結果。
+                xhr.onreadystatechange = function () {
+                    // 檢查狀態是否為 4，表示伺服器已經回應完成
+                    if (xhr.readyState === 4){
+                            //判斷(服務響應狀態碼 200 404 403 401 500)
+                            if(xhr.status === 200){
+                                document.getElementById('getSum').innerHTML = xhr.response;
+                        }
+                    }
+                };
+                // 3.發送。傳送 HTTP 請求到伺服器
+                xhr.send(); 
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>請輸入一個數字</h1>
+            <input id="search"/>
+            <button onclick="getSum()">Submit</button>
+            <div id="getSum"></div>
+        </div>
+    </body>
+</html>

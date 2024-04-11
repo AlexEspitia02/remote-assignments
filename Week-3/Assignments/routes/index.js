@@ -28,6 +28,8 @@ router.get('/data',(req, res)=>{
     }
 })
 
+router.use('/sum.html', express.static('views/sum.html'));
+
 router.get('/myName',(req, res)=>{
     const name=req.cookies.username;
     if (name){
