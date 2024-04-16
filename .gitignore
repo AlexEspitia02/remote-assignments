@@ -1,9 +1,2 @@
 # 忽略 node_modules 文件夹及其内容
 Week-3/Assignments/node_modules/
-
-# 忽略 package-lock.json 文件
-Week-3/Assignments/package-lock.json
-
-# 如果你不希望追蹤 package.json 文件的更改，可以将其添加到 .gitignore 中
-# 忽略 package.json 文件
-Week-3/Assignments/package.json
