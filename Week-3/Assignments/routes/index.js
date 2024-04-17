@@ -33,13 +33,14 @@ router.get('/myName',(req, res)=>{
 })
 
 router.get('/trackName',(req, res)=>{
+    const { name } = req.query;
+    res.cookie('username', name);
     res.redirect(`/myName`);
 })
 
 router.post('/myName',(req, res)=>{
     const name = req.body.username;
     if (name) {
-        res.cookie('username', name);
         res.redirect(`/trackName?name=${name}`);
     } else {
         res.render('myName');
