@@ -12,10 +12,14 @@ router.get('/data',(req, res)=>{
     }
     let turnToNumber=+number;
     if (!isNaN(turnToNumber)) {
-        let total = ((turnToNumber+1)*turnToNumber)/2;
-        return res.json(total);
-        //當使用res.send時，如果要發送的是數字，Express會將它解釋為HTTP狀態碼。
-        //因此，如果turnToNumber是一個數字，需要res.json來發送數字。
+        if(turnToNumber >= 0){
+            let total = ((turnToNumber+1)*turnToNumber)/2;
+            return res.json(total);
+            //當使用res.send時，如果要發送的是數字，Express會將它解釋為HTTP狀態碼。
+            //因此，如果turnToNumber是一個數字，需要res.json來發送數字。
+        }else{
+            return res.send(`Wrong Parameter!!!，${number}不是正整數`);
+        }
     }else{
         return res.send(`Wrong Parameter!!!，${number}不是數字`);
     }
