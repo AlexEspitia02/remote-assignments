@@ -1,2 +1,8 @@
 # 忽略 node_modules 文件夹及其内容
 Week-3/Assignments/node_modules/
+
+Week-4/Assignment-3/node_modules/
+
+Week-4/Assignment-3/schema.sql
+
+Week-4/Assignment-3/.env
