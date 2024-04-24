@@ -1,0 +1,9 @@
+doctype html
+html(lang="en")
+    head
+        title 您好#{email}
+    body
+        form(action='/signUp',method='post')
+            h1 您好,#{email}
+            p=signUpMessage
+            button(type="submit", name="action", value="logout") 登出

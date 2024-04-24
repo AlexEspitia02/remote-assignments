@@ -1,0 +1,9 @@
+doctype html
+html(lang="en")
+    head
+        title 您好#{email}
+    body
+        form(action='/signIn',method='post')
+            h1 您好,#{email}
+            p=signInMessage
+            button(type="submit", name="action", value="logout") 登出

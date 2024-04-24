@@ -21,15 +21,20 @@ app.use(session({
 app.set('view engine', 'pug');
 
 app.get("/", (req, res) => {
+    res.render('index');
+}) ;
+
+app.get("/signUp", (req, res) => {
     const { email } = req.cookies;
-    const signInMessage = req.session.signInMessage || '';
-    delete req.session.signInMessage;
-    if (email){
-        res.render('index', { email, signInMessage });
-    }else{
-        res.render('index');
-    }
-})
+    req.session.signUpMessage = `歡迎註冊成功，這裡什麼也沒有喔!!`;
+    res.render('signUp', { email, signUpMessage: req.session.signUpMessage });
+});
+
+app.get("/signIn", (req, res) => {
+    const { email } = req.cookies;
+    req.session.signInMessage = `歡迎回來這個什麼都沒有的網頁!!`;
+    res.render('signIn', { email, signInMessage: req.session.signInMessage });
+});
 
 app.post('/', async (req, res) => {
     const { email, password, action } = req.body;
@@ -37,23 +42,27 @@ app.post('/', async (req, res) => {
         if(await checkEmailExists(email)){
             return res.render('index', {message:`這個信箱有人使用過了!!`});
         }else{
-            await createUser(email, password)
-            res.cookie('email', email, { httpOnly: true });
-            req.session.signInMessage = `歡迎註冊成功，這裡什麼也沒有喔!!`;
-            res.redirect('/');
+            res.cookie('email', email);
+            res.redirect('/signUp');
         }
     }else if(action == 'signIn'){
         if (await signIn(email, password)) {
             res.cookie('email', email);
-            req.session.signInMessage = `歡迎回來這個什麼都沒有的網頁!!`;
-            res.redirect('/');
+            res.redirect('/signIn');
         } else {
             res.render('index', {message: '信箱或密碼錯誤，請再試一次!!'});
         }
-    }else if(action == 'logout'){
-        res.clearCookie('email');
-        res.redirect('/');
     }
+});
+
+app.post('/signUp', async (req, res) => {
+    res.clearCookie('email');
+    res.redirect('/');
+});
+
+app.post('/signIn', async (req, res) => {
+    res.clearCookie('email');
+    res.redirect('/');
 });
 
 app.use(function (err, req, res, next) {
