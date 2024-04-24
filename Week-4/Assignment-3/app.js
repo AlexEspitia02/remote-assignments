@@ -42,6 +42,7 @@ app.post('/', async (req, res) => {
         if(await checkEmailExists(email)){
             return res.render('index', {message:`這個信箱有人使用過了!!`});
         }else{
+            await createUser(email, password);
             res.cookie('email', email);
             res.redirect('/signUp');
         }
